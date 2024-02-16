@@ -1,0 +1,530 @@
+@import '_variables.scss';
+.project{
+    padding-top: 68px;
+    padding-bottom: 53px;
+    &__block {
+        display: grid;
+        grid-template-columns: 15% 15% 15% 23.5% 1fr;
+        grid-template-rows: auto;
+        min-width: 100%;
+        -moz-column-gap: 30px;
+        column-gap: 26px;
+        row-gap: 11px;
+        align-items: flex-start;
+        justify-self: start;
+        grid-template-areas:
+            "card1 card2 card3 card4 card4"
+            "card5 card5 card5 card6 card7";
+    }
+    &__head {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+    &__card1{
+        grid-area: card1;
+    }
+    &__card2{
+        grid-area: card2; 
+    }
+    &__card3{
+        grid-area: card3;
+       
+    }
+    &__card4{
+        grid-area: card4; 
+    }
+    &__card5{
+        grid-area: card5; 
+    }
+    &__card6{
+        grid-area: card6; 
+       
+    }
+    &__card7{
+        grid-area: card7;
+    }
+    &__card {
+        position: relative;
+        img {
+            min-width: 100%;
+            margin-bottom: 11px;
+        }
+        &-tag {
+            position: absolute;
+            top: 7px;
+            right: 7px;
+            font-family: $roboto;
+            font-size: 14px;
+            text-align: center;
+            padding:  6px 14px;
+            background-color: $colorTag;
+            color: $colorWhite;
+        }
+        &-img{
+            margin-bottom: 12px;
+        }
+        &-head {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            font-family: Roboto;
+            max-width: 278px;
+            font-size: 16px;
+            max-height: 55px;
+            line-height: 22px;
+            margin-bottom: 19px;
+        }
+        &-date{
+            font-family: $roboto;
+            font-size: 12px;
+            line-height: 22px;
+            color: #999999;
+            background-image: url('images/mdi_calendar_today.png');
+            background-repeat: no-repeat;
+            background-position: left center;
+            padding-left: 19px;
+        }
+        &-date-white{
+            position: absolute;
+            top: 22px;
+            left: 30px;
+            font-family: $roboto;
+            font-size: 12px;
+            line-height: 22px;
+            color: $colorWhite;
+            background-image: url('images/mdi_calendar_today.png');
+            background-repeat: no-repeat;
+            background-position: left center;
+            padding-left: 19px;
+        }
+        &-heading {
+            position: absolute;
+            top: 42px;
+            left: 29px;
+            line-height: 28px;
+            max-width: 230px;
+            font-size: 24px;
+            color: $colorWhite;
+        }
+        &-text {
+            position: absolute;
+            top: 99px;
+            left: 30px;
+            max-width: 292px;
+            font-family: $roboto;
+            font-size: 16px;
+            line-height: 22px;
+            color: $colorWhite;
+        }
+        &-text2 {
+            top: 75px;
+            left: 30px;
+        }
+        &-btn {
+            position: absolute;
+            bottom: 47px;
+            left: 30px;
+            min-width: 121px;
+            min-height: 50px;
+            font-size: 16px;
+            font-family: $roboto;
+            background-color: inherit;
+            border: 1px solid #FF6E30;
+            color: $colorWhite;
+            &:hover{
+                background-color: $hoverClassicBtn;
+            }
+            &:focus {
+                background-color: #BC572B;
+                border: 2px solid #FF6E30;
+            }
+            &:active {
+                background-color: #CE4307;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint1) {
+    .project {
+        &__block {
+            display: grid;
+            grid-template-columns: [one] 22.6% [two] 3% [three] 10% [four] 3% [five] 10% [six] 3% [seven] 10% [eight] 3% [nine] 9% [ten] 3% [eleven] 23.4% [twelwe];
+            grid-template-rows: auto;
+            -moz-column-gap: 0;
+            column-gap: 0;
+            row-gap: 6px;
+            align-items: flex-start;
+            justify-self: start;
+            grid-template-areas:
+                "card1 card1 card1 card2 card2 card2 card3 card3 card3 card3 card3 card3"
+                "card4 card4 card4 card4 card4 card4 card4 card6 card6 card6 card6 card6"
+                "card7 card7 card7 card7 card7 card5 card5 card5 card5 card5 card5 card5";
+        }
+        &__head {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+        &__card1{
+            grid-area: card1;
+            grid-column-start: one;
+            grid-column-end: two;
+            grid-row-end: 1;
+            margin-bottom: 20px;
+            .project__card-head {
+                max-width: 209px;
+                font-size: 16px;
+                max-height: 48px;
+                line-height: 22px;
+                margin-bottom: 14px;
+            }
+        }
+        &__card2{
+            grid-area: card2; 
+            grid-column-start: three;
+            grid-column-end: six;
+            grid-row-end: 1;
+            .project__card-head {
+                max-width: 209px;
+                font-size: 16px;
+                max-height: 48px;
+                line-height: 22px;
+                margin-bottom: 14px;
+            }
+        }
+        &__card3{
+            grid-area: card3;
+            grid-column-start: seven;
+            grid-column-end: twelwe;
+            grid-row-end: 1;
+            .project__card-head {
+                max-width: 448px;
+                font-size: 16px;
+                max-height: 55px;
+                line-height: 22px;
+                margin-bottom: 19px;
+            }
+        }
+        &__card4{
+            grid-area: card4; 
+            grid-column-start: one;
+            grid-column-end: eight;
+            grid-row-end: 2;
+        }
+        &__card5{
+            grid-area: card5;
+            grid-column-start: five;
+            grid-column-end: twelwe;
+            grid-row-end: 3; 
+        }
+        &__card6{
+            grid-area: card6; 
+            grid-column-start: nine;
+            grid-column-end: twelwe;
+            grid-row-end: 3; 
+            .project__card-head {
+                max-width: 333px;
+                font-size: 16px;
+                max-height: 55px;
+                line-height: 22px;
+                margin-bottom: 30px;
+            }
+        }
+        &__card7{
+            grid-area: card7;
+            grid-column-start: one;
+            grid-column-end: four;
+            grid-row-end: 3; 
+            .project__card-head {
+                max-width: 333px;
+                font-size: 16px;
+                max-height: 55px;
+                line-height: 22px;
+                margin-bottom: 19px;
+            }
+        }
+        &__card {
+            &-date-white {
+                top: 31px;
+                left: 30px;
+            }
+            &-heading {
+                top: 55px;
+                left: 29px;
+                line-height: 24px;
+            }
+            &-text {
+                top: 108px;
+                left: 30px;
+            }
+            &-text2 {
+                top: 85px;
+                left: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint2) {
+    .project {
+        padding-top: 68px;
+        padding-bottom: 52px;
+        &__block {
+            display: grid;
+            grid-template-columns: [one] 30.5% [two] 4.3% [three] 13.7% [four] 3.9% [five] 12.9% [six] 4.8% [seven] 14.3% [eight] 3.3% [nine] 2.5% [ten] 1.3% [eleven] 9.1% [twelwe];
+            grid-template-rows: auto;
+            column-gap: 0px;
+            row-gap: 24px;
+            align-items: flex-start;
+            justify-self: start;
+            grid-template-areas:
+                "card1 card1 card1 card1 card2 card2 card2 card2 card3 card3 card3 card3"
+                "card4 card4 card4 card4 card4 card4 card4 card4 card4 card4 card4 card4"
+                "card6 card6 card6 card6 card6 card6 card7 card7 card7 card7 card7 card7"
+                "card5 card5 card5 card5 card5 card5 card5 card5 card5 card5 card5 card5"; 
+        }
+        &__card-head {
+            font-family: Roboto;
+            max-width: 278px;
+            font-size: 16px;
+            max-height: 65px;
+            line-height: 22px;
+            margin-bottom: 11px;
+        }
+        &__card-btn {
+            position: absolute;
+            bottom: 36px;
+            left: 30px;
+            min-width: 118px;
+            min-height: 49px;
+            font-size: 16px;
+            font-family: Roboto;
+            background-color: inherit;
+            border: 1px solid #ff6e30;
+            color: #fff;
+        }
+        &__card-tag {
+            position: absolute;
+            top: 6px;
+            right: 10px;
+            font-family: Roboto;
+            font-size: 14px;
+            text-align: center;
+            padding: 6px 14px;
+            background-color: #202020;
+            color: #fff;
+        }
+        &__head {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+        &__card1{
+            grid-area: card1;
+            grid-column-start: one;
+            grid-column-end: two;
+            grid-row-end: 1;
+        }
+        &__card2{
+            grid-area: card2; 
+            grid-column-start: three;
+            grid-column-end: six;
+            grid-row-end: 1;
+        }
+        &__card3{
+            grid-area: card3;
+            grid-column-start: seven;
+            grid-column-end: twelwe;
+            grid-row-end: 1;
+            .project__card-head {
+                max-width: 278px;
+                font-size: 16px;
+                max-height: 48px;
+                margin-bottom: 27px;
+            }
+        }
+        &__card4{
+            grid-area: card4; 
+            grid-column-start: one;
+            grid-column-end: twelwe;
+            grid-row-end: 2;
+            .project__card-head {
+                margin-bottom: 2px;
+            }
+            .project__card-img {
+                min-width: 100%;
+                margin-bottom: 1px;
+            }
+            .project__card-btn {
+                bottom: 47px;
+                left: 30px;
+                min-width: 118px;
+                min-height: 49px;
+            }
+        }
+        &__card5{
+            grid-area: card5;
+            grid-column-start: one;
+            grid-column-end: twelwe;
+            grid-row-end: 4; 
+            .project__card-btn {
+                position: absolute;
+                bottom: 52px;
+                left: 30px;
+                min-width: 118px;
+                min-height: 49px;
+            }
+        }
+        &__card6{
+            grid-area: card6; 
+            grid-column-start: one;
+            grid-column-end: four;
+            grid-row-end: 4; 
+            .project__card-head {
+                max-width: 333px;
+                font-size: 16px;
+                max-height: 65px;
+                margin-bottom: 17px;
+            }
+            .project__card-img {
+                margin-bottom: 10px;
+            }
+        }
+        &__card7{
+            grid-area: card7;
+            grid-column-start: five;
+            grid-column-end: twelwe;
+            grid-row-end: 4; 
+            .project__card-head {
+                max-width: 333px;
+                font-size: 16px;
+                max-height: 65px;
+                margin-bottom: 18px;
+            }
+            .project__card-img {
+                margin-bottom: 12px;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint3) {
+    .project {
+        padding-top: 50px;
+        padding-bottom: 34px;
+        &__head {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        &__block {
+            display: grid;
+            grid-template-columns: repeat(1,auto);
+            grid-template-rows:  repeat(7,auto);
+            -moz-column-gap: 0;
+            column-gap: 0;
+            row-gap: 24px;
+            align-items: flex-start;
+            justify-self: start;
+            grid-template-areas:
+                "card1"
+                "card2"
+                "card3"
+                "card4"
+                "card6"
+                "card7"
+                "card5";
+        }
+        &__card{
+            img {
+                min-width: 100%;
+                margin-bottom: 12px;
+            }
+            &-tag {
+                top: 5px;
+                right: 5px;
+                font-size: 12px;
+                padding: 4px 14px;
+            }
+            &-btn {
+                bottom: 32px;
+                left: 30px;
+                min-width: 109px;
+                min-height: 40px;
+                font-size: 14px;
+                border: 3px solid #ff6e30;
+               
+            }
+            &-text {
+                top: 282px;
+                left: 30px;
+                max-width: 292px;
+                font-size: 14px;
+                line-height: 18px;
+            }
+            &-heading {
+                top: 223px;
+                left: 29px;
+                line-height: 24px;
+                max-width: 230px;
+                font-size: 24px;
+            }
+            &-date-white {
+                top: 195px;
+            }
+            &-text2 {
+                top: 259px;
+                max-width: 158px;
+            }
+        }
+        &__card1{
+            grid-area: card1;
+           margin-bottom: 13px;
+        }
+        &__card2{
+            grid-area: card2; 
+      
+        }
+        &__card3{
+            grid-area: card3;
+           .project__card-head {
+                max-width: 278px;
+                font-size: 16px;
+                max-height: 48px;
+                margin-bottom: 5px;
+            }
+        }
+        &__card4{
+            grid-area: card4; 
+            max-height: 132vw;
+        }
+        &__card5{
+            grid-area: card5;
+            max-height: 131vw;
+            .project__card-btn {
+                position: absolute;
+                bottom: 31px;
+                left: 31px;
+                min-width: 109px;
+                min-height: 40px;
+            }
+            .project__card-text2 {
+                top: 255px;
+                max-width: 158px;
+            }
+        }
+        &__card6{
+            grid-area: card6; 
+            .project__card-img {
+                margin-bottom: 16px;
+            }
+            .project__card-head {
+                margin-bottom: 10px;
+            }
+        }
+        &__card7{
+            grid-area: card7;
+         
+        }
+    }
+}
